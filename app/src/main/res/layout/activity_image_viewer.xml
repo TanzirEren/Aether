@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent" android:layout_height="match_parent" android:background="#000000">
+  <ImageView android:id="@+id/imageView" android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="matrix" android:contentDescription="Image"/>
+  <ImageButton android:id="@+id/btnClose" android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/ic_close" android:tint="#FFFFFF" android:background="?attr/selectableItemBackgroundBorderless" android:padding="10dp" android:scaleType="fitCenter" android:contentDescription="Close" android:layout_gravity="top|start" android:layout_margin="12dp"/>
+  <ImageButton android:id="@+id/btnShare" android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/ic_share" android:tint="#FFFFFF" android:background="?attr/selectableItemBackgroundBorderless" android:padding="10dp" android:scaleType="fitCenter" android:contentDescription="Share" android:layout_gravity="top|end" android:layout_margin="12dp"/>
+</FrameLayout>

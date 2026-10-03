@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="dk_bg0">#06141B</color>
+    <color name="dk_bg1">#0B1F28</color>
+    <color name="dk_bg2">#122B36</color>
+    <color name="dk_bg3">#1A3947</color>
+    <color name="dk_primary">#35E0C2</color>
+    <color name="dk_primaryDeep">#0F4F49</color>
+    <color name="dk_amber">#FFB648</color>
+    <color name="dk_sky">#6FB7FF</color>
+    <color name="dk_danger">#FF6B6B</color>
+    <color name="dk_txtHi">#ECF7F4</color>
+    <color name="dk_txtMid">#9DB8BF</color>
+    <color name="dk_txtLow">#5E7A82</color>
+    <color name="lt_bg0">#EEF4F2</color>
+    <color name="lt_bg1">#FFFFFF</color>
+    <color name="lt_bg2">#E7F0ED</color>
+    <color name="lt_bg3">#D9E6E2</color>
+    <color name="lt_primary">#0E9C84</color>
+    <color name="lt_primaryDeep">#D7F1EA</color>
+    <color name="lt_amber">#C97F10</color>
+    <color name="lt_sky">#1D6FD1</color>
+    <color name="lt_danger">#D64545</color>
+    <color name="lt_txtHi">#12333A</color>
+    <color name="lt_txtMid">#4C6A72</color>
+    <color name="lt_txtLow">#7E979E</color>
+    <color name="white">#FFFFFF</color>
+</resources>

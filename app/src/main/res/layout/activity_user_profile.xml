@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent" android:layout_height="match_parent" android:background="?attr/aBg0">
+  <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+    <FrameLayout android:layout_width="match_parent" android:layout_height="210dp">
+      <ImageView android:id="@+id/ivCover" android:layout_width="match_parent" android:layout_height="160dp" android:scaleType="centerCrop" android:background="?attr/aBg2" android:contentDescription="Cover"/>
+      <ImageView android:id="@+id/ivAvatar" android:layout_width="96dp" android:layout_height="96dp" android:layout_gravity="bottom|start" android:layout_marginStart="20dp" android:scaleType="centerCrop" android:background="@drawable/bg_circle" android:clipToOutline="true" android:outlineProvider="background" android:contentDescription="Photo"/>
+      <ImageButton android:id="@+id/btnBack" android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/ic_back" android:tint="#FFFFFF" android:background="@drawable/bg_circle_btn" android:padding="12dp" android:scaleType="fitCenter" android:contentDescription="Back" android:layout_gravity="top|start" android:layout_margin="12dp"/>
+    </FrameLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="20dp">
+      <TextView android:id="@+id/tvName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:textSize="22sp" android:textColor="?attr/aTxtHi" android:fontFamily="sans-serif-medium" android:textStyle="bold"/>
+      <TextView android:id="@+id/tvUsername" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:textSize="14sp" android:textColor="?attr/aSky"/>
+      <TextView android:id="@+id/tvBio" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:textSize="15sp" android:textColor="?attr/aTxtMid" android:layout_marginTop="10dp"/>
+      <Button android:id="@+id/btnMessage" android:layout_width="match_parent" android:layout_height="50dp" android:layout_marginTop="20dp" android:text="Message"/>
+      <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginTop="8dp">
+        <Button android:id="@+id/btnAudio" style="@style/Widget.MaterialComponents.Button.OutlinedButton" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Audio" android:textColor="?attr/aTxtHi" android:layout_marginEnd="4dp"/>
+        <Button android:id="@+id/btnVideo" style="@style/Widget.MaterialComponents.Button.OutlinedButton" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Video" android:textColor="?attr/aTxtHi" android:layout_marginStart="4dp"/>
+      </LinearLayout>
+      <Button android:id="@+id/btnBlock" style="@style/Widget.MaterialComponents.Button.TextButton" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Block" android:textColor="?attr/aDanger" android:layout_marginTop="8dp"/>
+    </LinearLayout>
+  </LinearLayout>
+</ScrollView>

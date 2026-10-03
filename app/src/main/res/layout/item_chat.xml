@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:paddingStart="16dp" android:paddingEnd="16dp" android:paddingTop="10dp" android:paddingBottom="10dp" android:background="?attr/selectableItemBackground">
+  <FrameLayout android:layout_width="52dp" android:layout_height="52dp">
+    <ImageView android:id="@+id/ivAvatar" android:layout_width="52dp" android:layout_height="52dp" android:scaleType="centerCrop" android:background="@drawable/bg_circle" android:clipToOutline="true" android:outlineProvider="background" android:contentDescription="avatar"/>
+    <View android:id="@+id/dotOnline" android:layout_width="14dp" android:layout_height="14dp" android:layout_gravity="bottom|end" android:background="@drawable/bg_dot_online" android:visibility="gone"/>
+  </FrameLayout>
+  <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:layout_marginStart="12dp" android:layout_marginEnd="8dp">
+    <TextView android:id="@+id/tvName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:textSize="16sp" android:textColor="?attr/aTxtHi" android:fontFamily="sans-serif-medium" android:textStyle="bold" android:maxLines="1" android:ellipsize="end"/>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginTop="2dp">
+      <TextView android:id="@+id/tvTick" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:textSize="13sp" android:textColor="?attr/aTxtLow" android:layout_marginEnd="4dp" android:visibility="gone"/>
+      <TextView android:id="@+id/tvPreview" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:textSize="14sp" android:textColor="?attr/aTxtMid" android:maxLines="1" android:ellipsize="end"/>
+    </LinearLayout>
+  </LinearLayout>
+  <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical" android:gravity="end">
+    <TextView android:id="@+id/tvTime" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:textSize="11sp" android:textColor="?attr/aTxtLow"/>
+    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginTop="4dp">
+      <ImageView android:id="@+id/ivMute" android:layout_width="14dp" android:layout_height="14dp" android:src="@drawable/ic_mute" android:tint="?attr/aTxtLow" android:visibility="gone" android:layout_marginEnd="4dp" android:contentDescription="Muted"/>
+      <ImageView android:id="@+id/ivPin" android:layout_width="14dp" android:layout_height="14dp" android:src="@drawable/ic_pin" android:tint="?attr/aTxtLow" android:visibility="gone" android:layout_marginEnd="4dp" android:contentDescription="Pinned"/>
+      <TextView android:id="@+id/tvBadge" android:layout_width="wrap_content" android:layout_height="20dp" android:minWidth="20dp" android:gravity="center" android:paddingStart="6dp" android:paddingEnd="6dp" android:background="@drawable/bg_badge" android:textColor="?attr/aBg0" android:textSize="11sp" android:textStyle="bold" android:visibility="gone"/>
+    </LinearLayout>
+  </LinearLayout>
+</LinearLayout>

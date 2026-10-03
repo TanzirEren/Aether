@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Aether</string>
+    <string name="tagline">Message at the speed of light.</string>
+    <string name="nav_home">Home</string>
+    <string name="nav_updates">Updates</string>
+    <string name="nav_calls">Calls</string>
+    <string name="nav_contacts">Contacts</string>
+    <string name="nav_profile">Profile</string>
+    <string name="about_free">Aether is free forever. No ads. No tracking for profit.</string>
+</resources>

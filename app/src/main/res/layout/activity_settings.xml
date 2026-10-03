@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:background="?attr/aBg0">
+  <LinearLayout android:layout_width="match_parent" android:layout_height="56dp" android:orientation="horizontal" android:gravity="center_vertical" android:paddingEnd="16dp">
+    <ImageButton android:id="@+id/btnBack" android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/ic_back" android:tint="?attr/aTxtHi" android:background="?attr/selectableItemBackgroundBorderless" android:padding="10dp" android:scaleType="fitCenter" android:contentDescription="Back"/>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Settings" android:textSize="22sp" android:textColor="?attr/aTxtHi" android:layout_marginStart="4dp" android:fontFamily="sans-serif-medium" android:textStyle="bold"/>
+  </LinearLayout>
+  <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+      <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="APPEARANCE" android:textSize="12sp" android:textColor="?attr/aPrimary" android:layout_marginBottom="6dp"/>
+      <com.google.android.material.switchmaterial.SwitchMaterial android:id="@+id/swTheme" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Daylight theme (off = Midnight)" android:textColor="?attr/aTxtHi" android:padding="8dp"/>
+      <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="PRIVACY &amp; NOTIFICATIONS" android:textSize="12sp" android:textColor="?attr/aPrimary" android:layout_marginTop="18dp" android:layout_marginBottom="6dp"/>
+      <com.google.android.material.switchmaterial.SwitchMaterial android:id="@+id/swReceipts" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Send read receipts" android:textColor="?attr/aTxtHi" android:padding="8dp"/>
+      <com.google.android.material.switchmaterial.SwitchMaterial android:id="@+id/swLastSeen" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Show my last seen" android:textColor="?attr/aTxtHi" android:padding="8dp"/>
+      <com.google.android.material.switchmaterial.SwitchMaterial android:id="@+id/swSound" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Notification sound" android:textColor="?attr/aTxtHi" android:padding="8dp"/>
+      <Button android:id="@+id/btnBlocked" style="@style/Widget.MaterialComponents.Button.OutlinedButton" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Blocked users" android:textColor="?attr/aTxtHi" android:layout_marginTop="8dp"/>
+      <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="STORAGE &amp; CACHE" android:textSize="12sp" android:textColor="?attr/aPrimary" android:layout_marginTop="18dp" android:layout_marginBottom="6dp"/>
+      <TextView android:id="@+id/tvCacheSize" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:textSize="15sp" android:textColor="?attr/aTxtMid"/>
+      <Button android:id="@+id/btnClearCache" style="@style/Widget.MaterialComponents.Button.OutlinedButton" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Clear all cache" android:textColor="?attr/aTxtHi" android:layout_marginTop="8dp"/>
+      <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="ABOUT" android:textSize="12sp" android:textColor="?attr/aPrimary" android:layout_marginTop="18dp" android:layout_marginBottom="6dp"/>
+      <TextView android:id="@+id/tvAbout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:textSize="14sp" android:textColor="?attr/aTxtMid"/>
+      <Button android:id="@+id/btnDelete" style="@style/Widget.MaterialComponents.Button.TextButton" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Delete account" android:textColor="?attr/aDanger" android:layout_marginTop="24dp"/>
+    </LinearLayout>
+  </ScrollView>
+</LinearLayout>

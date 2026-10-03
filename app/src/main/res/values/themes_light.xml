@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.Aether.Light" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/lt_primary</item>
+        <item name="colorOnPrimary">@color/lt_bg0</item>
+        <item name="colorSecondary">@color/lt_sky</item>
+        <item name="colorSurface">@color/lt_bg1</item>
+        <item name="colorOnSurface">@color/lt_txtHi</item>
+        <item name="android:windowBackground">@color/lt_bg0</item>
+        <item name="android:statusBarColor">@color/lt_bg0</item>
+        <item name="android:navigationBarColor">@color/lt_bg1</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:textColorPrimary">@color/lt_txtHi</item>
+        <item name="android:textColorSecondary">@color/lt_txtMid</item>
+        <item name="android:textColorHint">@color/lt_txtLow</item>
+        <item name="materialButtonStyle">@style/Widget.Aether.Button</item>
+        <item name="aBg0">@color/lt_bg0</item>
+        <item name="aBg1">@color/lt_bg1</item>
+        <item name="aBg2">@color/lt_bg2</item>
+        <item name="aBg3">@color/lt_bg3</item>
+        <item name="aPrimary">@color/lt_primary</item>
+        <item name="aPrimaryDeep">@color/lt_primaryDeep</item>
+        <item name="aAmber">@color/lt_amber</item>
+        <item name="aSky">@color/lt_sky</item>
+        <item name="aDanger">@color/lt_danger</item>
+        <item name="aTxtHi">@color/lt_txtHi</item>
+        <item name="aTxtMid">@color/lt_txtMid</item>
+        <item name="aTxtLow">@color/lt_txtLow</item>
+    </style>
+</resources>

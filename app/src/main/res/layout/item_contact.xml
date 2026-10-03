@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:paddingStart="16dp" android:paddingEnd="8dp" android:paddingTop="10dp" android:paddingBottom="10dp" android:background="?attr/selectableItemBackground">
+  <FrameLayout android:layout_width="48dp" android:layout_height="48dp">
+    <ImageView android:id="@+id/ivAvatar" android:layout_width="48dp" android:layout_height="48dp" android:scaleType="centerCrop" android:background="@drawable/bg_circle" android:clipToOutline="true" android:outlineProvider="background" android:contentDescription="avatar"/>
+    <View android:id="@+id/dotOnline" android:layout_width="13dp" android:layout_height="13dp" android:layout_gravity="bottom|end" android:background="@drawable/bg_dot_online" android:visibility="gone"/>
+  </FrameLayout>
+  <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:layout_marginStart="12dp">
+    <TextView android:id="@+id/tvName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:textSize="16sp" android:textColor="?attr/aTxtHi" android:fontFamily="sans-serif-medium" android:textStyle="bold"/>
+    <TextView android:id="@+id/tvSub" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:textSize="13sp" android:textColor="?attr/aTxtMid"/>
+  </LinearLayout>
+  <ImageButton android:id="@+id/btnChat" android:layout_width="42dp" android:layout_height="42dp" android:src="@drawable/ic_chat" android:tint="?attr/aPrimary" android:background="?attr/selectableItemBackgroundBorderless" android:padding="10dp" android:scaleType="fitCenter" android:contentDescription="Chat"/>
+  <ImageButton android:id="@+id/btnCall" android:layout_width="42dp" android:layout_height="42dp" android:src="@drawable/ic_call" android:tint="?attr/aSky" android:background="?attr/selectableItemBackgroundBorderless" android:padding="10dp" android:scaleType="fitCenter" android:contentDescription="Call"/>
+  <TextView android:id="@+id/btnAction" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Cancel" android:textColor="?attr/aDanger" android:textSize="14sp" android:padding="10dp" android:background="?attr/selectableItemBackground" android:visibility="gone"/>
+</LinearLayout>

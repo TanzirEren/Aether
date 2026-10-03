@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.Aether" parent="Theme.MaterialComponents.NoActionBar">
+        <item name="colorPrimary">@color/dk_primary</item>
+        <item name="colorOnPrimary">@color/dk_bg0</item>
+        <item name="colorSecondary">@color/dk_sky</item>
+        <item name="colorSurface">@color/dk_bg1</item>
+        <item name="colorOnSurface">@color/dk_txtHi</item>
+        <item name="android:windowBackground">@color/dk_bg0</item>
+        <item name="android:statusBarColor">@color/dk_bg0</item>
+        <item name="android:navigationBarColor">@color/dk_bg1</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:textColorPrimary">@color/dk_txtHi</item>
+        <item name="android:textColorSecondary">@color/dk_txtMid</item>
+        <item name="android:textColorHint">@color/dk_txtLow</item>
+        <item name="materialButtonStyle">@style/Widget.Aether.Button</item>
+        <item name="aBg0">@color/dk_bg0</item>
+        <item name="aBg1">@color/dk_bg1</item>
+        <item name="aBg2">@color/dk_bg2</item>
+        <item name="aBg3">@color/dk_bg3</item>
+        <item name="aPrimary">@color/dk_primary</item>
+        <item name="aPrimaryDeep">@color/dk_primaryDeep</item>
+        <item name="aAmber">@color/dk_amber</item>
+        <item name="aSky">@color/dk_sky</item>
+        <item name="aDanger">@color/dk_danger</item>
+        <item name="aTxtHi">@color/dk_txtHi</item>
+        <item name="aTxtMid">@color/dk_txtMid</item>
+        <item name="aTxtLow">@color/dk_txtLow</item>
+    </style>
+    <style name="Widget.Aether.Button" parent="Widget.MaterialComponents.Button">
+        <item name="cornerRadius">12dp</item>
+    </style>
+</resources>

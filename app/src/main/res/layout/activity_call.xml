@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent" android:layout_height="match_parent" android:background="@drawable/bg_call">
+  <org.webrtc.SurfaceViewRenderer android:id="@+id/remoteView" android:layout_width="match_parent" android:layout_height="match_parent" android:visibility="gone"/>
+  <org.webrtc.SurfaceViewRenderer android:id="@+id/localView" android:layout_width="104dp" android:layout_height="148dp" android:layout_gravity="top|end" android:layout_marginTop="48dp" android:layout_marginEnd="16dp" android:visibility="gone"/>
+  <LinearLayout android:id="@+id/infoGroup" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_gravity="center" android:layout_marginBottom="80dp" android:orientation="vertical" android:gravity="center_horizontal">
+    <FrameLayout android:layout_width="220dp" android:layout_height="220dp">
+      <View android:id="@+id/glow" android:layout_width="200dp" android:layout_height="200dp" android:layout_gravity="center" android:background="@drawable/bg_circle_glow"/>
+      <ImageView android:id="@+id/ivAvatar" android:layout_width="124dp" android:layout_height="124dp" android:layout_gravity="center" android:scaleType="centerCrop" android:background="@drawable/bg_circle" android:clipToOutline="true" android:outlineProvider="background" android:contentDescription="Contact photo"/>
+    </FrameLayout>
+    <TextView android:id="@+id/tvName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="28sp" android:textColor="#ECF7F4" android:fontFamily="sans-serif-medium" android:textStyle="bold"/>
+    <TextView android:id="@+id/tvStatus" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:textSize="16sp" android:textColor="#9DB8BF"/>
+  </LinearLayout>
+  <LinearLayout android:id="@+id/controls" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_gravity="bottom" android:layout_marginBottom="40dp" android:orientation="horizontal" android:gravity="center" android:visibility="gone">
+    <ImageButton android:id="@+id/btnMute" android:layout_width="56dp" android:layout_height="56dp" android:src="@drawable/ic_mic" android:tint="#FFFFFF" android:background="@drawable/bg_circle_btn" android:padding="16dp" android:scaleType="fitCenter" android:contentDescription="Mute" android:layout_margin="8dp"/>
+    <ImageButton android:id="@+id/btnSpeaker" android:layout_width="56dp" android:layout_height="56dp" android:src="@drawable/ic_speaker" android:tint="#FFFFFF" android:background="@drawable/bg_circle_btn" android:padding="16dp" android:scaleType="fitCenter" android:contentDescription="Speaker" android:layout_margin="8dp"/>
+    <ImageButton android:id="@+id/btnFlip" android:layout_width="56dp" android:layout_height="56dp" android:src="@drawable/ic_switch_cam" android:tint="#FFFFFF" android:background="@drawable/bg_circle_btn" android:padding="16dp" android:scaleType="fitCenter" android:contentDescription="Flip camera" android:layout_margin="8dp"/>
+    <ImageButton android:id="@+id/btnCam" android:layout_width="56dp" android:layout_height="56dp" android:src="@drawable/ic_videocam" android:tint="#FFFFFF" android:background="@drawable/bg_circle_btn" android:padding="16dp" android:scaleType="fitCenter" android:contentDescription="Camera" android:layout_margin="8dp"/>
+    <ImageButton android:id="@+id/btnEnd" android:layout_width="64dp" android:layout_height="64dp" android:src="@drawable/ic_call_end" android:tint="#FFFFFF" android:background="@drawable/bg_circle_danger" android:padding="18dp" android:scaleType="fitCenter" android:contentDescription="End call" android:layout_margin="8dp"/>
+  </LinearLayout>
+  <LinearLayout android:id="@+id/incomingGroup" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_gravity="bottom" android:layout_marginBottom="64dp" android:orientation="horizontal" android:gravity="center" android:visibility="gone">
+    <ImageButton android:id="@+id/btnDecline" android:layout_width="72dp" android:layout_height="72dp" android:src="@drawable/ic_call_end" android:tint="#FFFFFF" android:background="@drawable/bg_circle_danger" android:padding="20dp" android:scaleType="fitCenter" android:contentDescription="Decline" android:layout_marginEnd="56dp"/>
+    <ImageButton android:id="@+id/btnAccept" android:layout_width="72dp" android:layout_height="72dp" android:src="@drawable/ic_call" android:tint="#06141B" android:background="@drawable/bg_circle_ok" android:padding="20dp" android:scaleType="fitCenter" android:contentDescription="Accept" android:layout_marginStart="56dp"/>
+  </LinearLayout>
+</FrameLayout>

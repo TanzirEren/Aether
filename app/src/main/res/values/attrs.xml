@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="aBg0" format="color"/>
+    <attr name="aBg1" format="color"/>
+    <attr name="aBg2" format="color"/>
+    <attr name="aBg3" format="color"/>
+    <attr name="aPrimary" format="color"/>
+    <attr name="aPrimaryDeep" format="color"/>
+    <attr name="aAmber" format="color"/>
+    <attr name="aSky" format="color"/>
+    <attr name="aDanger" format="color"/>
+    <attr name="aTxtHi" format="color"/>
+    <attr name="aTxtMid" format="color"/>
+    <attr name="aTxtLow" format="color"/>
+</resources>
