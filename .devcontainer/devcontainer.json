@@ -1,0 +1,10 @@
+{
+  "name": "Aether Android",
+  "image": "mcr.microsoft.com/devcontainers/java:17",
+  "postCreateCommand": "bash .devcontainer/setup-sdk.sh",
+  "customizations": {
+    "vscode": {
+      "extensions": ["vscjava.vscode-java-pack", "vscjava.vscode-gradle"]
+    }
+  }
+}
