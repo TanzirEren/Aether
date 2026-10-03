@@ -1,0 +1,116 @@
+{
+  "rules": {
+    ".read": false,
+    ".write": false,
+    "usernames": {
+      "$u": {
+        ".read": true,
+        ".validate": "$u.matches(/^[a-z0-9_]{3,20}$/)",
+        ".write": "auth != null && ((!data.exists() && newData.val() === auth.uid) || (data.val() === auth.uid && !newData.exists()))"
+      }
+    },
+    "users": {
+      "$uid": {
+        ".read": "auth != null",
+        ".write": "auth != null && auth.uid === $uid",
+        "email": { ".read": true }
+      }
+    },
+    "userPrivate": {
+      "$uid": {
+        ".read": "auth != null && auth.uid === $uid",
+        ".write": "auth != null && auth.uid === $uid"
+      }
+    },
+    "chats": {
+      "$chatId": {
+        "meta": {
+          ".read": "auth != null && data.child('participants').child(auth.uid).exists()",
+          "participants": {
+            ".read": "auth != null",
+            ".write": "auth != null && newData.child(auth.uid).val() === true && (!data.exists() || data.child(auth.uid).exists())"
+          },
+          "lastMsg": { ".write": "auth != null && root.child('chats').child($chatId).child('meta/participants').child(auth.uid).exists()" },
+          "updatedAt": { ".write": "auth != null && root.child('chats').child($chatId).child('meta/participants').child(auth.uid).exists()" },
+          "typing": {
+            "$tuid": { ".write": "auth != null && auth.uid === $tuid" }
+          }
+        },
+        "messages": {
+          ".read": "auth != null && root.child('chats').child($chatId).child('meta/participants').child(auth.uid).exists()",
+          ".indexOn": ["createdAt"],
+          "$mid": {
+            ".write": "auth != null && root.child('chats').child($chatId).child('meta/participants').child(auth.uid).exists() && ((!data.exists() && newData.child('from').val() === auth.uid && !root.child('userPrivate').child(newData.child('to').val()).child('blocked').child(auth.uid).exists()) || (data.exists() && data.child('from').val() === auth.uid))",
+            "status": { ".write": "auth != null && root.child('chats').child($chatId).child('meta/participants').child(auth.uid).exists()" },
+            "reactions": { ".write": "auth != null && root.child('chats').child($chatId).child('meta/participants').child(auth.uid).exists()" },
+            "deletedFor": { ".write": "auth != null && root.child('chats').child($chatId).child('meta/participants').child(auth.uid).exists()" }
+          }
+        }
+      }
+    },
+    "userChats": {
+      "$uid": {
+        ".read": "auth != null && auth.uid === $uid",
+        "$chatId": {
+          ".write": "auth != null && (auth.uid === $uid || root.child('chats').child($chatId).child('meta/participants').child(auth.uid).exists())"
+        }
+      }
+    },
+    "friendRequests": {
+      "$to": {
+        ".read": "auth != null && auth.uid === $to",
+        "$from": {
+          ".write": "auth != null && ((auth.uid === $from && !root.child('userPrivate').child($to).child('blocked').child(auth.uid).exists()) || auth.uid === $to)"
+        }
+      }
+    },
+    "sentRequests": {
+      "$uid": {
+        ".read": "auth != null && auth.uid === $uid",
+        "$to": { ".write": "auth != null && (auth.uid === $uid || auth.uid === $to)" }
+      }
+    },
+    "contacts": {
+      "$uid": {
+        ".read": "auth != null && auth.uid === $uid",
+        "$other": {
+          ".write": "auth != null && (auth.uid === $uid || (auth.uid === $other && (!newData.exists() || root.child('friendRequests').child($other).child($uid).child('status').val() === 'pending')))"
+        }
+      }
+    },
+    "notifications": {
+      "$uid": {
+        ".read": "auth != null && auth.uid === $uid",
+        ".write": "auth != null && auth.uid === $uid",
+        "$nid": { ".write": "auth != null && (auth.uid === $uid || !data.exists())" }
+      }
+    },
+    "callLog": {
+      "$uid": {
+        ".read": "auth != null && auth.uid === $uid",
+        ".indexOn": ["at"],
+        "$cid": { ".write": "auth != null && (auth.uid === $uid || !data.exists())" }
+      }
+    },
+    "calls": {
+      "ringing": {
+        "$to": {
+          ".read": "auth != null && auth.uid === $to",
+          ".write": "auth != null && (auth.uid === $to || !root.child('userPrivate').child($to).child('blocked').child(auth.uid).exists())"
+        }
+      }
+    },
+    "rtc": {
+      "$callId": {
+        ".read": "auth != null",
+        ".write": "auth != null"
+      }
+    },
+    "security": {
+      "$uid": {
+        ".read": "auth != null && auth.uid === $uid",
+        ".write": "auth != null && auth.uid === $uid"
+      }
+    }
+  }
+}

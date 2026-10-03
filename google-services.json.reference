@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "325050196400",
+    "firebase_url": "https://aether-7dddc-default-rtdb.firebaseio.com",
+    "project_id": "aether-7dddc",
+    "storage_bucket": "aether-7dddc.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:325050196400:android:011af441d36772a7a77675",
+        "android_client_info": {
+          "package_name": "com.aether.chat"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCjivnazF2_nHKiYEzbh_ungY3pTcZ0jgg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
