@@ -1,0 +1,55 @@
+name: Build Aether APK
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: Set up Gradle 8.5
+        uses: gradle/actions/setup-gradle@v3
+        with:
+          gradle-version: '8.5'
+
+      # Optional: keep your Firebase keys out of the repo.
+      # Add repo secrets FB_API_KEY, FB_APP_ID, FB_PROJECT_ID, FB_DATABASE_URL
+      # (Settings -> Secrets and variables -> Actions). If a secret is empty the
+      # value already committed in Constants.java is used.
+      - name: Inject Firebase config from secrets (optional)
+        env:
+          FB_API_KEY: ${{ secrets.FB_API_KEY }}
+          FB_APP_ID: ${{ secrets.FB_APP_ID }}
+          FB_PROJECT_ID: ${{ secrets.FB_PROJECT_ID }}
+          FB_DATABASE_URL: ${{ secrets.FB_DATABASE_URL }}
+        run: |
+          F=app/src/main/java/com/aether/chat/util/Constants.java
+          if [ -n "$FB_API_KEY" ]; then sed -i "s|YOUR_API_KEY|$FB_API_KEY|" "$F"; fi
+          if [ -n "$FB_APP_ID" ]; then sed -i "s|YOUR_APP_ID|$FB_APP_ID|" "$F"; fi
+          if [ -n "$FB_PROJECT_ID" ]; then sed -i "s|YOUR_PROJECT_ID|$FB_PROJECT_ID|g" "$F"; fi
+          if [ -n "$FB_DATABASE_URL" ]; then sed -i "s|https://YOUR_PROJECT_ID-default-rtdb.firebaseio.com|$FB_DATABASE_URL|" "$F"; fi
+          grep -n "YOUR_" "$F" || echo "Firebase config injected / already set"
+
+      - name: Build debug APK
+        run: gradle assembleDebug --stacktrace
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: Aether-debug-apk
+          path: app/build/outputs/apk/debug/app-debug.apk
