@@ -1,0 +1,4 @@
+{
+  "java.import.gradle.java.home": "/usr/lib/jvm/msopenjdk-current",
+  "gradle.javaHome": "/usr/lib/jvm/msopenjdk-current"
+}
